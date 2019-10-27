@@ -3,19 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DamilolaShopeyin.Web", "DamilolaShopeyin.Web\DamilolaShopeyin.Web.csproj", "{D7C2998F-BB19-4840-8FAD-260C61DF7F22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DamilolaShopeyin.Web", "DamilolaShopeyin.Web\DamilolaShopeyin.Web.csproj", "{D7C2998F-BB19-4840-8FAD-260C61DF7F22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DamilolaShopeyin.Mobile.Android", "DamilolaShopeyin.Mobile\DamilolaShopeyin.Mobile.Android\DamilolaShopeyin.Mobile.Android.csproj", "{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DamilolaShopeyin.Core", "DamilolaShopeyin.Core\DamilolaShopeyin.Core.csproj", "{37802859-A853-4F5D-87D9-612B646C67CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DamilolaShopeyin.Mobile.iOS", "DamilolaShopeyin.Mobile\DamilolaShopeyin.Mobile.iOS\DamilolaShopeyin.Mobile.iOS.csproj", "{195CE2AF-31C4-45F4-995F-6D0455B6A077}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DamilolaShopeyin.API", "DamilolaShopeyin.API\DamilolaShopeyin.API.csproj", "{51299D2B-7372-4738-B3F9-7F441A69B9A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DamilolaShopeyin.Mobile", "DamilolaShopeyin.Mobile\DamilolaShopeyin.Mobile\DamilolaShopeyin.Mobile.csproj", "{499BB143-3489-4870-9963-C2FFBE08C163}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kaysho.NET.Blazor", "Kaysho.NET.Blazor\Kaysho.NET.Blazor.csproj", "{8B390CF0-CF3D-4411-9743-8924EA35006D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{37802859-A853-4F5D-87D9-612B646C67CE} = {37802859-A853-4F5D-87D9-612B646C67CE}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DamilolaShopeyin.Core", "DamilolaShopeyin.Core\DamilolaShopeyin.Core.csproj", "{37802859-A853-4F5D-87D9-612B646C67CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kaysho.NET.Mobile.Android", "Kaysho.NET.Mobile\Kaysho.NET.Mobile.Android\Kaysho.NET.Mobile.Android.csproj", "{D7411542-F446-401F-97C0-D37D55EF9D39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DamilolaShopeyin.Blazor", "DamilolaShopeyin.Blazor\DamilolaShopeyin.Blazor.csproj", "{5FEF5484-423D-4AE2-AF3F-6C9DF2401B7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kaysho.NET.Mobile.iOS", "Kaysho.NET.Mobile\Kaysho.NET.Mobile.iOS\Kaysho.NET.Mobile.iOS.csproj", "{828C8B20-6EF4-4C71-87A0-7D78A5119EF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DamilolaShopeyin.API", "DamilolaShopeyin.API\DamilolaShopeyin.API.csproj", "{51299D2B-7372-4738-B3F9-7F441A69B9A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kaysho.NET.Mobile", "Kaysho.NET.Mobile\Kaysho.NET.Mobile\Kaysho.NET.Mobile.csproj", "{20897D47-FED6-42C1-AE71-248D1D35AEB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,46 +42,6 @@ Global
 		{D7C2998F-BB19-4840-8FAD-260C61DF7F22}.Release|iPhone.Build.0 = Release|Any CPU
 		{D7C2998F-BB19-4840-8FAD-260C61DF7F22}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{D7C2998F-BB19-4840-8FAD-260C61DF7F22}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Debug|iPhone.Deploy.0 = Debug|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Debug|iPhoneSimulator.Deploy.0 = Debug|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Release|iPhone.Build.0 = Release|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Release|iPhone.Deploy.0 = Release|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{E02A7ABC-EDC7-4D15-A366-FAB80EC57DB8}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
-		{195CE2AF-31C4-45F4-995F-6D0455B6A077}.Debug|Any CPU.ActiveCfg = Debug|iPhone
-		{195CE2AF-31C4-45F4-995F-6D0455B6A077}.Debug|iPhone.ActiveCfg = Debug|iPhone
-		{195CE2AF-31C4-45F4-995F-6D0455B6A077}.Debug|iPhone.Build.0 = Debug|iPhone
-		{195CE2AF-31C4-45F4-995F-6D0455B6A077}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
-		{195CE2AF-31C4-45F4-995F-6D0455B6A077}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
-		{195CE2AF-31C4-45F4-995F-6D0455B6A077}.Release|Any CPU.ActiveCfg = Release|iPhone
-		{195CE2AF-31C4-45F4-995F-6D0455B6A077}.Release|iPhone.ActiveCfg = Release|iPhone
-		{195CE2AF-31C4-45F4-995F-6D0455B6A077}.Release|iPhone.Build.0 = Release|iPhone
-		{195CE2AF-31C4-45F4-995F-6D0455B6A077}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
-		{195CE2AF-31C4-45F4-995F-6D0455B6A077}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
-		{499BB143-3489-4870-9963-C2FFBE08C163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{499BB143-3489-4870-9963-C2FFBE08C163}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{499BB143-3489-4870-9963-C2FFBE08C163}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{499BB143-3489-4870-9963-C2FFBE08C163}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{499BB143-3489-4870-9963-C2FFBE08C163}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{499BB143-3489-4870-9963-C2FFBE08C163}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{499BB143-3489-4870-9963-C2FFBE08C163}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{499BB143-3489-4870-9963-C2FFBE08C163}.Release|Any CPU.Build.0 = Release|Any CPU
-		{499BB143-3489-4870-9963-C2FFBE08C163}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{499BB143-3489-4870-9963-C2FFBE08C163}.Release|iPhone.Build.0 = Release|Any CPU
-		{499BB143-3489-4870-9963-C2FFBE08C163}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{499BB143-3489-4870-9963-C2FFBE08C163}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{37802859-A853-4F5D-87D9-612B646C67CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{37802859-A853-4F5D-87D9-612B646C67CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37802859-A853-4F5D-87D9-612B646C67CE}.Debug|iPhone.ActiveCfg = Debug|Any CPU
@@ -91,18 +54,6 @@ Global
 		{37802859-A853-4F5D-87D9-612B646C67CE}.Release|iPhone.Build.0 = Release|Any CPU
 		{37802859-A853-4F5D-87D9-612B646C67CE}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{37802859-A853-4F5D-87D9-612B646C67CE}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{5FEF5484-423D-4AE2-AF3F-6C9DF2401B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5FEF5484-423D-4AE2-AF3F-6C9DF2401B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5FEF5484-423D-4AE2-AF3F-6C9DF2401B7D}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{5FEF5484-423D-4AE2-AF3F-6C9DF2401B7D}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{5FEF5484-423D-4AE2-AF3F-6C9DF2401B7D}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{5FEF5484-423D-4AE2-AF3F-6C9DF2401B7D}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{5FEF5484-423D-4AE2-AF3F-6C9DF2401B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5FEF5484-423D-4AE2-AF3F-6C9DF2401B7D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5FEF5484-423D-4AE2-AF3F-6C9DF2401B7D}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{5FEF5484-423D-4AE2-AF3F-6C9DF2401B7D}.Release|iPhone.Build.0 = Release|Any CPU
-		{5FEF5484-423D-4AE2-AF3F-6C9DF2401B7D}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{5FEF5484-423D-4AE2-AF3F-6C9DF2401B7D}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{51299D2B-7372-4738-B3F9-7F441A69B9A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{51299D2B-7372-4738-B3F9-7F441A69B9A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51299D2B-7372-4738-B3F9-7F441A69B9A4}.Debug|iPhone.ActiveCfg = Debug|Any CPU
@@ -115,6 +66,58 @@ Global
 		{51299D2B-7372-4738-B3F9-7F441A69B9A4}.Release|iPhone.Build.0 = Release|Any CPU
 		{51299D2B-7372-4738-B3F9-7F441A69B9A4}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{51299D2B-7372-4738-B3F9-7F441A69B9A4}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{8B390CF0-CF3D-4411-9743-8924EA35006D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B390CF0-CF3D-4411-9743-8924EA35006D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B390CF0-CF3D-4411-9743-8924EA35006D}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{8B390CF0-CF3D-4411-9743-8924EA35006D}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{8B390CF0-CF3D-4411-9743-8924EA35006D}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{8B390CF0-CF3D-4411-9743-8924EA35006D}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{8B390CF0-CF3D-4411-9743-8924EA35006D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B390CF0-CF3D-4411-9743-8924EA35006D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B390CF0-CF3D-4411-9743-8924EA35006D}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{8B390CF0-CF3D-4411-9743-8924EA35006D}.Release|iPhone.Build.0 = Release|Any CPU
+		{8B390CF0-CF3D-4411-9743-8924EA35006D}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{8B390CF0-CF3D-4411-9743-8924EA35006D}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Debug|iPhone.Deploy.0 = Debug|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Debug|iPhoneSimulator.Deploy.0 = Debug|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Release|iPhone.Build.0 = Release|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Release|iPhone.Deploy.0 = Release|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{D7411542-F446-401F-97C0-D37D55EF9D39}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{828C8B20-6EF4-4C71-87A0-7D78A5119EF2}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{828C8B20-6EF4-4C71-87A0-7D78A5119EF2}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{828C8B20-6EF4-4C71-87A0-7D78A5119EF2}.Debug|iPhone.Build.0 = Debug|iPhone
+		{828C8B20-6EF4-4C71-87A0-7D78A5119EF2}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{828C8B20-6EF4-4C71-87A0-7D78A5119EF2}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{828C8B20-6EF4-4C71-87A0-7D78A5119EF2}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{828C8B20-6EF4-4C71-87A0-7D78A5119EF2}.Release|iPhone.ActiveCfg = Release|iPhone
+		{828C8B20-6EF4-4C71-87A0-7D78A5119EF2}.Release|iPhone.Build.0 = Release|iPhone
+		{828C8B20-6EF4-4C71-87A0-7D78A5119EF2}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{828C8B20-6EF4-4C71-87A0-7D78A5119EF2}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{20897D47-FED6-42C1-AE71-248D1D35AEB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20897D47-FED6-42C1-AE71-248D1D35AEB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20897D47-FED6-42C1-AE71-248D1D35AEB7}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{20897D47-FED6-42C1-AE71-248D1D35AEB7}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{20897D47-FED6-42C1-AE71-248D1D35AEB7}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{20897D47-FED6-42C1-AE71-248D1D35AEB7}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{20897D47-FED6-42C1-AE71-248D1D35AEB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20897D47-FED6-42C1-AE71-248D1D35AEB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20897D47-FED6-42C1-AE71-248D1D35AEB7}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{20897D47-FED6-42C1-AE71-248D1D35AEB7}.Release|iPhone.Build.0 = Release|Any CPU
+		{20897D47-FED6-42C1-AE71-248D1D35AEB7}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{20897D47-FED6-42C1-AE71-248D1D35AEB7}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
