@@ -17,12 +17,16 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0-preview8.19405.4" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.6.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc4" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.3.0.27" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="17.3.0.27" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="17.3.0.27" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.3.0.27" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DamilolaShopeyin.Core\DamilolaShopeyin.Core.csproj" />
+    <ProjectReference Include="..\Kaysho.NET.Core\Kaysho.NET.Core.csproj" />
   </ItemGroup>
 
 </Project>

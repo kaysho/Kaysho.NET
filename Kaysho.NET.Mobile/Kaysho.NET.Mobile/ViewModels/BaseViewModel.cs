@@ -1,27 +1,34 @@
-﻿using System;
+﻿using Kaysho.NET.Mobile.Models;
+using Kaysho.NET.Mobile.Services;
+using Prism.Navigation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
 using Xamarin.Forms;
-
-using Kaysho.NET.Mobile.Models;
-using Kaysho.NET.Mobile.Services;
 
 namespace Kaysho.NET.Mobile.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+
+        protected readonly INavigationService _navigationService;
+        public BaseViewModel(INavigationService navigationService)
+        {
+            _navigationService = navigationService;
+        }
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
-        bool isBusy = false;
+        private bool isBusy = false;
+
         public bool IsBusy
         {
             get { return isBusy; }
             set { SetProperty(ref isBusy, value); }
         }
 
-        string title = string.Empty;
+        private string title = string.Empty;
+
         public string Title
         {
             get { return title; }
@@ -42,7 +49,9 @@ namespace Kaysho.NET.Mobile.ViewModels
         }
 
         #region INotifyPropertyChanged
+
         public event PropertyChangedEventHandler PropertyChanged;
+
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             var changed = PropertyChanged;
@@ -51,6 +60,7 @@ namespace Kaysho.NET.Mobile.ViewModels
 
             changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        #endregion
+
+        #endregion INotifyPropertyChanged
     }
 }

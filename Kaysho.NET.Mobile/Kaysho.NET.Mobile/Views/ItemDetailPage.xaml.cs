@@ -1,10 +1,7 @@
-﻿using System;
+﻿using Kaysho.NET.Mobile.Models;
+using Kaysho.NET.Mobile.ViewModels;
 using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-using Kaysho.NET.Mobile.Models;
-using Kaysho.NET.Mobile.ViewModels;
 
 namespace Kaysho.NET.Mobile.Views
 {
@@ -13,7 +10,7 @@ namespace Kaysho.NET.Mobile.Views
     [DesignTimeVisible(false)]
     public partial class ItemDetailPage : ContentPage
     {
-        ItemDetailViewModel viewModel;
+        private ItemDetailViewModel viewModel;
 
         public ItemDetailPage(ItemDetailViewModel viewModel)
         {
@@ -32,7 +29,7 @@ namespace Kaysho.NET.Mobile.Views
                 Description = "This is an item description."
             };
 
-            viewModel = new ItemDetailViewModel(item);
+            //viewModel = new ItemDetailViewModel(item);
             BindingContext = viewModel;
         }
     }

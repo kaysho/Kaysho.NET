@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prism.Navigation;
+using System;
 using System.Windows.Input;
 
 using Xamarin.Forms;
@@ -7,7 +8,7 @@ namespace Kaysho.NET.Mobile.ViewModels
 {
     public class AboutViewModel : BaseViewModel
     {
-        public AboutViewModel()
+        public AboutViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = "About";
 

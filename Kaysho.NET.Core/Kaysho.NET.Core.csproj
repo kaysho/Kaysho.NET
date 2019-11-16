@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.3.0.27" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="17.3.0.27" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="17.3.0.27" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.3.0.27" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.6.0" />
+  </ItemGroup>
+
+</Project>

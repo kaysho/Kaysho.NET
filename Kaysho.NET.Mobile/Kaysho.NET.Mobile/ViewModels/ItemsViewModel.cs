@@ -1,12 +1,11 @@
-﻿using System;
+﻿using Kaysho.NET.Mobile.Models;
+using Kaysho.NET.Mobile.Views;
+using Prism.Navigation;
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
-
-using Kaysho.NET.Mobile.Models;
-using Kaysho.NET.Mobile.Views;
 
 namespace Kaysho.NET.Mobile.ViewModels
 {
@@ -15,7 +14,7 @@ namespace Kaysho.NET.Mobile.ViewModels
         public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
-        public ItemsViewModel()
+        public ItemsViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = "Browse";
             Items = new ObservableCollection<Item>();
@@ -29,7 +28,7 @@ namespace Kaysho.NET.Mobile.ViewModels
             });
         }
 
-        async Task ExecuteLoadItemsCommand()
+        private async Task ExecuteLoadItemsCommand()
         {
             if (IsBusy)
                 return;

@@ -13,12 +13,16 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.3.0.27" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="17.3.0.27" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="17.3.0.27" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.3.0.27" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <ProjectReference Include="..\DamilolaShopeyin.API\DamilolaShopeyin.API.csproj" />
-    <ProjectReference Include="..\DamilolaShopeyin.Core\DamilolaShopeyin.Core.csproj" />
+    <ProjectReference Include="..\Kaysho.NET.API\Kaysho.NET.API.csproj" />
+    <ProjectReference Include="..\Kaysho.NET.Core\Kaysho.NET.Core.csproj" />
   </ItemGroup>
 
 </Project>
