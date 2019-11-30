@@ -28,5 +28,12 @@ namespace Kaysho.NET.Mobile.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
+        public override void OnBackPressed()
+        {
+            XF.Material.Droid.Material.HandleBackButton(base.OnBackPressed);
+
+        }
+
     }
 }

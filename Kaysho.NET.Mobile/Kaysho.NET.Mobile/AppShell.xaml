@@ -8,7 +8,6 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:local="clr-namespace:Kaysho.NET.Mobile.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:navigation="clr-namespace:Kaysho.NET.Mobile.Views.Navigation"
     xmlns:profile="clr-namespace:Kaysho.NET.Mobile.Views.Profile"
     Title="Kaysho.NET.Mobile"
     NavigationPage.HasNavigationBar="False"
@@ -38,6 +37,7 @@
 
     <!--  Your Pages  -->
     <TabBar>
+
         <Tab Title="Home" Icon="tab_feed.png">
             <!--<ShellContent ContentTemplate="{DataTemplate navigation:NavigationTileCardPage}" />-->
             <ShellContent ContentTemplate="{DataTemplate articleList:ArticleListPage}" />

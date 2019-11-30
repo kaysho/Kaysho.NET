@@ -1,4 +1,6 @@
-﻿using Kaysho.NET.Mobile.Models;
+﻿using Kaysho.NET.Mobile.Contracts.Services.Data;
+using Kaysho.NET.Mobile.Contracts.Services.General;
+using Kaysho.NET.Mobile.Models;
 using Kaysho.NET.Mobile.Views;
 using Prism.Navigation;
 using System;
@@ -13,8 +15,14 @@ namespace Kaysho.NET.Mobile.ViewModels
     {
         public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
+        private readonly IAuthenticationService _authenticationService;
+        private readonly ISettingsService _settingsService;
 
-        public ItemsViewModel(INavigationService navigationService) : base(navigationService)
+        public ItemsViewModel(INavigationService navigationService,
+            IAuthenticationService authenticationService,
+            ISettingsService settingsService
+
+            ) : base(navigationService)
         {
             Title = "Browse";
             Items = new ObservableCollection<Item>();

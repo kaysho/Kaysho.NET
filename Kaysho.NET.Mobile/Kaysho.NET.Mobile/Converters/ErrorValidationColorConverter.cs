@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Kaysho.NET.Mobile.Controls;
+using Kaysho.NET.Mobile.ViewModels.Login;
+using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
-using Kaysho.NET.Mobile.Controls;
-using Kaysho.NET.Mobile.ViewModels.Login;
 
 namespace Kaysho.NET.Mobile.Converters
 {
@@ -35,7 +35,7 @@ namespace Kaysho.NET.Mobile.Converters
             {
                 var emailEntry = parameter as BorderlessEntry;
 
-                if (!(emailEntry.BindingContext is LoginViewModel bindingContext))
+                if (!(emailEntry.BindingContext is LoginPageViewModel bindingContext))
                 {
                     return Color.Transparent;
                 }
@@ -56,7 +56,7 @@ namespace Kaysho.NET.Mobile.Converters
             {
                 var emailEntry = parameter as BorderlessEntry;
 
-                if (!(emailEntry.BindingContext is LoginViewModel bindingContext)) return Color.FromHex("#ced2d9");
+                if (!(emailEntry.BindingContext is LoginPageViewModel bindingContext)) return Color.FromHex("#ced2d9");
 
                 var isFocused1 = (bool)value;
                 bindingContext.IsInvalidEmail = !isFocused1 && !CheckValidEmail(bindingContext.Email);

@@ -3,10 +3,12 @@ using DamilolaShopeyin.API.Filters;
 using DamilolaShopeyin.API.Repositories;
 using DamilolaShopeyin.Core.Models;
 using DamilolaShopeyin.Core.Services;
+using Kaysho.NET.API.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -35,6 +37,10 @@ namespace DamilolaShopeyin.API
 
             services.AddIdentity<ApplicationUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<DamilolaShopeyinContext>();
+
+            services.AddTransient<IEmailSender, EmailSender>();
+            services.Configure<AuthMessageSenderOptions>(Configuration);
+
 
             services.AddScoped<IRepository<Blog>, BlogRepository>();
 

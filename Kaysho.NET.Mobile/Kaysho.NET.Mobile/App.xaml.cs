@@ -1,3 +1,8 @@
+using Kaysho.NET.Mobile.Bootstrap;
+using Kaysho.NET.Mobile.Contracts.Repository;
+using Kaysho.NET.Mobile.Contracts.Services.Data;
+using Kaysho.NET.Mobile.Contracts.Services.General;
+using Kaysho.NET.Mobile.Repository;
 using Kaysho.NET.Mobile.Services;
 using Kaysho.NET.Mobile.ViewModels;
 using Kaysho.NET.Mobile.ViewModels.Article;
@@ -38,8 +43,9 @@ namespace Kaysho.NET.Mobile
             else
                 DependencyService.Register<AzureDataStore>();
 
-
             InitializeComponent();
+            //InitializeApp();
+
             XF.Material.Forms.Material.Init(this, "Material.Configuration");
 
             await NavigationService.NavigateAsync("LoginPage");
@@ -55,6 +61,19 @@ namespace Kaysho.NET.Mobile
             containerRegistry.RegisterForNavigation<ArticleListPage, ArticleListPageViewModel>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
             containerRegistry.RegisterForNavigation<SignUpPage, SignUpPageViewModel>();
+
+            containerRegistry.RegisterSingleton<IGenericRepository, GenericRepository>();
+            containerRegistry.RegisterSingleton<ISettingsService, SettingsService>();
+
+
+            containerRegistry.RegisterSingleton<IAuthenticationService, AuthenticationService>();
+
+
+        }
+
+        private void InitializeApp()
+        {
+            AppContainer.RegisterDependencies();
         }
 
 

@@ -11,7 +11,7 @@ namespace Kaysho.NET.Mobile.ViewModels.Login
     {
         #region Fields
 
-        private string email;
+        // private string email;
 
         private bool isInvalidEmail;
 
@@ -19,7 +19,6 @@ namespace Kaysho.NET.Mobile.ViewModels.Login
 
         public LoginViewModel(INavigationService navigationService) : base(navigationService)
         {
-
         }
 
         #region Event
@@ -35,24 +34,24 @@ namespace Kaysho.NET.Mobile.ViewModels.Login
         /// <summary>
         /// Gets or sets the property that bounds with an entry that gets the email ID from user in the login page.
         /// </summary>
-        public string Email
-        {
-            get
-            {
-                return this.email;
-            }
+        //public string Email
+        //{
+        //    get
+        //    {
+        //        return this.email;
+        //    }
 
-            set
-            {
-                if (this.email == value)
-                {
-                    return;
-                }
+        //    set
+        //    {
+        //        if (this.email == value)
+        //        {
+        //            return;
+        //        }
 
-                this.email = value;
-                this.OnPropertyChanged();
-            }
-        }
+        //        this.email = value;
+        //        this.OnPropertyChanged();
+        //    }
+        //}
 
         /// <summary>
         /// Gets or sets a value indicating whether the entered email is valid or invalid.
