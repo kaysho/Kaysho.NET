@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Kaysho.NET.Mobile.Views.ItemsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="BrowseItemsPage"
+    Title="{Binding Title}"
+    material:MaterialNavigationPage.AppBarColor="#2c3e50"
+    material:MaterialNavigationPage.AppBarTitleTextAlignment="Start"
+    material:MaterialNavigationPage.AppBarTitleTextFontFamily="Roboto"
+    material:MaterialNavigationPage.AppBarTitleTextFontSize="14"
+    material:MaterialNavigationPage.StatusBarColor="#1B3147"
+    mc:Ignorable="d">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="AddItem_Clicked" Text="Add" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <ListView
+            x:Name="ItemsListView"
+            CachingStrategy="RecycleElement"
+            HasUnevenRows="true"
+            IsPullToRefreshEnabled="true"
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+            ItemSelected="OnItemSelected"
+            ItemsSource="{Binding Items}"
+            RefreshCommand="{Binding LoadItemsCommand}"
+            VerticalOptions="FillAndExpand">
+            <d:ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>First Item</x:String>
+                    <x:String>Second Item</x:String>
+                    <x:String>Third Item</x:String>
+                    <x:String>Fourth Item</x:String>
+                    <x:String>Fifth Item</x:String>
+                    <x:String>Sixth Item</x:String>
+                </x:Array>
+            </d:ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <material:MaterialLabel
+                                FontSize="16"
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemTextStyle}"
+                                Text="{Binding Text}"
+                                TypeScale="H6" />
+                            <material:MaterialLabel
+                                FontSize="13"
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                Text="{Binding Description}"
+                                TypeScale="Overline" />
+
+                            <!--<material:MaterialLabel
+                                HorizontalOptions="Center"
+                                Text="Oops, there's nothing here! :("
+                                TypeScale="H2"
+                                VerticalOptions="Center" />-->
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

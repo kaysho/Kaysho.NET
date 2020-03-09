@@ -1,0 +1,73 @@
+﻿@page "/login"
+@using DamilolaShopeyin.Core.Models
+@using Kaysho.NET.Core.Contracts.Repository
+@inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+@inject IAuthenticationService authService
+
+<EditForm Model="@login" OnValidSubmit="@ValidateUser">
+    <div>
+        <br /><br /><br /><br /><br />
+    </div>
+    <div>
+        <MatH4>Login</MatH4>
+        <MatHeadline6>Log in with your details</MatHeadline6>
+    </div>
+    <div>
+        <br />
+    </div>
+    <div>
+        <br />
+    </div>
+    <div class="col-12">
+        <MatTextField @bind-Value="login.Email" Label="Email" Outlined="true"></MatTextField>
+    </div>
+    <br />
+    <div>
+        <MatTextField @bind-Value="login.Password" Type="password" Label="Password" Outlined="true"></MatTextField>
+    </div>
+    <br />
+    <div>
+        <span class="col-12"></span>
+        <MatButton Type="submit">Login</MatButton>
+
+    </div>
+    <br />
+    <div style="text-align:left; font-weight:bold">
+        <span class="col-12">@LoginMesssage</span>
+    </div>
+</EditForm>
+
+@code {
+    private DamilolaShopeyin.Core.Models.Login login;
+    public string LoginMesssage { get; set; }
+
+    protected override Task OnInitializedAsync()
+    {
+
+        login = new DamilolaShopeyin.Core.Models.Login();
+        return base.OnInitializedAsync();
+    }
+
+    private async Task<bool> ValidateUser()
+    {
+        //call an API
+
+        var returnedUser = await authService.Authenticate(login);
+
+        if (returnedUser != null)
+        {
+            
+
+            ((CustomAuthenticationStateProvider)AuthenticationStateProvider).MarkUserAsAuthenticated(returnedUser);
+            NavigationManager.NavigateTo("/");
+        }
+        else
+        {
+            LoginMesssage = "Invalid username or password";
+        }
+
+        return await Task.FromResult(true);
+    }
+}

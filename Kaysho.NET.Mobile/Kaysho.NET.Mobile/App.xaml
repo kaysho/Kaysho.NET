@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication
+    x:Class="Kaysho.NET.Mobile.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mtrl="clr-namespace:XF.Material.Forms.Resources;assembly=XF.Material"
+    xmlns:mtrltypo="clr-namespace:XF.Material.Forms.Resources.Typography;assembly=XF.Material"
+    xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms"
+    xmlns:themes="clr-namespace:Kaysho.NET.Mobile.Themes;assembly=Kaysho.NET.Mobile"
+    mc:Ignorable="d">
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <themes:LightTheme />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+
+    </Application.Resources>
+</prism:PrismApplication>

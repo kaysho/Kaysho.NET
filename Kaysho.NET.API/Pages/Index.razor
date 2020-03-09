@@ -1,0 +1,76 @@
+﻿@page "/"
+@inject IBlogService blogService
+@using DamilolaShopeyin.Core.Models
+@inject IJSRuntime JSRuntime;
+
+
+    <div style="visibility:hidden">
+        <MatProgressBar Indeterminate="true"></MatProgressBar>
+    </div>
+
+
+@foreach (var blog in Blogs)
+{
+    <div class="row justify-content-center m-3" style="padding-bottom:2em">
+        <div class="col-sm-8">
+            <MatCard class="demo-mat-card">
+                <MatCardContent>
+                    <MatCardMedia Wide="true" ImageUrl="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"></MatCardMedia>
+                    <div class="demo-mat-card-content">
+                        <MatHeadline6 class="demo-mat-card-clean-margin padding-label">
+                            @blog.Title
+                        </MatHeadline6>
+                        <MatSubtitle2 class="demo-mat-card-clean-margin padding-label">
+                            by Damilola Shopeyin
+                        </MatSubtitle2>
+                    </div>
+
+                    <MatBody2 class="demo-mat-card-content demo-mat-card-clean-margin padding-label">
+                        @blog.Snippet
+                    </MatBody2>
+                </MatCardContent>
+                <MatCardActions>
+                    <MatCardActionButtons>
+                        <MatButton>Read</MatButton>
+                        <MatButton>Bookmark</MatButton>
+                    </MatCardActionButtons>
+
+                    <AuthorizeView Roles="Admin">
+                        <Authorized>
+                            <MatCardActionIcons>
+                                <MatIconButton Icon="@MatIconNames.Edit"></MatIconButton>
+                                <MatIconButton Icon="@MatIconNames.Delete" @onclick="(() => DeleteBlog(blog.Id))"></MatIconButton>
+                            </MatCardActionIcons>
+                        </Authorized>
+                    </AuthorizeView>
+
+                </MatCardActions>
+            </MatCard>
+        </div>
+    </div>
+}
+
+
+@code{
+    public List<Blog> Blogs { get; set; }
+
+    protected override async void OnInitialized()
+    {
+        Blogs = new List<Blog>();
+        var blogs = await blogService.GetAllBlogsAsync();
+        Blogs = blogs.ToList();
+
+        StateHasChanged();
+
+    }
+
+    public async Task DeleteBlog(int id)
+    {
+
+        //var confirm = await JSRuntime.InvokeAsync<bool>("confirmDelete");
+
+        //if (confirm)
+        await blogService.DeleteBlog(id);
+
+    }
+}

@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>542c7e4c-87e8-445e-a882-b4fbd4a4a33e</UserSecretsId>
+  </PropertyGroup>
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20191116181813_Initials.cs" />
+    <Compile Remove="Migrations\20191116181813_Initials.Designer.cs" />
+    <Compile Remove="Migrations\20200124121425_SeedDataMigration.cs" />
+    <Compile Remove="Migrations\20200124121425_SeedDataMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200124124638_ChangeToCommentMigration.cs" />
+    <Compile Remove="Migrations\20200124124638_ChangeToCommentMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200124125010_ChangeToCommentMigration.cs" />
+    <Compile Remove="Migrations\20200124125010_ChangeToCommentMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200124150014_CommentDateTimeMigration.cs" />
+    <Compile Remove="Migrations\20200124150014_CommentDateTimeMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200124155313_ModifiedMigration.cs" />
+    <Compile Remove="Migrations\20200124155313_ModifiedMigration.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Blazored.LocalStorage" Version="2.1.1" />
+    <PackageReference Include="Blazored.SessionStorage" Version="1.0.11" />
+    <PackageReference Include="EmbeddedBlazorContent" Version="1.10.0" />
+    <PackageReference Include="Google.Cloud.Storage.V1" Version="3.0.0-beta01" />
+    <PackageReference Include="MatBlazor" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.2" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.6.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Sendgrid" Version="9.12.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="5.0.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kaysho.NET.Core\Kaysho.NET.Core.csproj" />
+  </ItemGroup>
+
+</Project>
